@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento Petshop</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <figure>
+        <img src="./src/assets/logo.svg" alt="Logo Mundo Pet">
+    </figure>
+    <div id="container" class="container">
+        <header>
+            <h1>Sua agenda</h1>
+            <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+
+            <div class="input">
+                <img src="./src/assets/icons/calender.svg" alt="Icone de calendario">
+                <input 
+                type="date" 
+                id="date" 
+                name="date" 
+                required />
+            </div>
+        </header>
+        <main>
+            <section class="morning">
+                <div class="header">
+                    <img src="./src/assets/icons/morning.svg" alt="Icone de manhã">
+                    <h2>Manhã</h2>
+                    <span>09-12h</span>
+                </div>
+                <ul class="ul">
+                    <!-- <li class="list">
+                        <div class="info">
+                            <span class="hour">09:00</span>
+                            <span class="animal">Thor <small class="name">/ Fernanda costa</small></span>
+                        </div>
+                        <p class="category">Vacinação</p>
+                        <span class="remove">Remover gendamento</span>
+                    </li> -->
+                </ul>
+            </section>
+            <section class="afternoon">
+                <div class="header">
+                    <img src="./src/assets/icons/afternoon.svg" alt="Icone de Tarde">
+                    <h2>Tarde</h2>
+                    <span>13-18h</span>
+                </div>
+                <ul class="ul">
+                    <!-- <li class="list">
+                        <div class="info">
+                            <span class="hour">13:00</span>
+                            <span class="animal">Mel <small class="name">/ João Souza</small></span>
+                        </div>
+                        <p class="category">Corte de Unhas</p>
+                        <span class="remove">Remover gendamento</span>
+                    </li>
+                    <li class="list border-top">
+                        <div class="info">
+                            <span class="hour">14:00</span>
+                            <span class="animal">Bella <small class="name">/ Pedro Martins</small></span>
+                        </div>
+                        <p class="category">Aplicação de Anti-pulgas</p>
+                        <span class="remove">Remover gendamento</span>
+                    </li>
+                    <li class="list border-top">
+                        <div class="info">
+                            <span class="hour">15:00</span>
+                            <span class="animal">Simba <small class="name">/ Juliana Rocha</small></span>
+                        </div>
+                        <p class="category">Tosa Higiênica</p>
+                        <span class="remove">Remover gendamento</span>
+                    </li> -->
+                </ul>
+            </section>
+            <section class="nigth">
+                <div class="header">
+                    <img src="./src/assets/icons/night.svg" alt="Icone de noite">
+                    <h2>Noite</h2>
+                    <span>19-21h</span>
+                </div>
+                <ul class="ul">
+                    <!-- <li class="list">
+                        <div class="info">
+                            <span class="hour">20:00</span>
+                            <span class="animal">Max <small class="name">/ Camila Santos</small></span>
+                        </div>
+                        <p class="category">Limpeza de Dentes</p>
+                        <span class="remove">Remover gendamento</span>
+                    </li>
+                </ul> -->
+            </section>
+        </main>
+    </div>
+    <div class="btn-wrapper">
+        <button id="openModalBtn" type="button" class="btn">NOVO AGENDAMENTO</button>
+    </div>
+
+    <form action="/cadastrar" method="post" id="modal" class="modal container-modal">
+        <img src="./src/assets/icons/cancel.svg" alt="Icone de cancelar" id="cancel" class="trash">
+        <div class="header-superimposed">
+            <h2>Agende um atendimento</h2>
+            <p>Preencha os dados do cliente para realizar o agendamento:</p>
+        </div>
+        <div class="schedule-wrapper">
+            <label for="tutorName" class="label">Nome do tutor</label>
+            <div class="input-wrapper">
+                <img src="./src/assets/icons/user.svg" alt="Icone do usuario">
+                <input 
+                type="text" 
+                id="tutorName" 
+                placeholder="Helena Souza"
+                class="schedule-input">
+            </div>
+        </div>
+
+
+        <div class="schedule-wrapper">
+            <label for="petName" class="label">Nome do pet</label>
+            <div class="input-wrapper">
+                <img src="./src/assets/icons/pet.svg" alt="Icone do pet">
+                <input 
+                type="text" 
+                id="patName" 
+                placeholder="Cheddar"
+                class="schedule-input">
+            </div>
+        </div>
+
+
+        <div class="schedule-wrapper">
+            <label for="phone" class="label">Telefone</label>
+            <div class="input-wrapper">
+                <img src="./src/assets/icons/phone.svg" alt="Icone de telefone">
+                <input 
+                type="text" 
+                id="phone" 
+                placeholder="(00) 0 0000-0000" 
+                class="schedule-input">
+            </div>
+        </div>
+
+
+        <div class="schedule-wrapper">
+            <label for="description" class="label">Descrição do serviço</label>
+            <div class="input-wrapper height">
+                <input 
+                type="text" 
+                id="description" 
+                placeholder="Banho e tosa"
+                class="schedule-input">
+            </div>
+        </div>
+
+        <div class="hour-date-wrapper">
+            <div class="schedule-wrapper">
+                <label for="date-schedule" class="label">Data</label>
+                <div class="hour-date">
+                    <img src="./src/assets/icons/calender.svg" alt="Icone de calendario">
+                    <input
+                    type="date"
+                    id="date-schedule"
+                    name="date-schedule"
+                    required />
+                </div>
+            </div>
+
+            <div class="schedule-wrapper">
+                <label for="time" class="label">Hora</label>
+                <div class="hour-date">
+                    <img src="./src/assets/icons/time.svg" alt="Ícone de relógio">
+                    <select id="time" name="time" required></select>
+                </div>
+            </div>
+            
+        </div>
+        <button type="submit" class="btn-submit">Agendar</button>
+    </form>
+</body>
+</html>
