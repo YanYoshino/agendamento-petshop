@@ -1,5 +1,6 @@
 import dayjs from "dayjs";
-import { openingHours } from "../utils/opening.hours";
+import { populateHours } from "./format-time";
+
 
 const form = document.querySelector("form");
 const selectedDate = document.getElementById("date-schedule");
@@ -13,3 +14,5 @@ selectedDate.min = inputToday;
 selectedDateHome.value = inputToday;
 selectedDateHome.min = inputToday;
 
+// Formatando hora
+populateHours();
