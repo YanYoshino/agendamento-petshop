@@ -1,5 +1,4 @@
 import dayjs from "dayjs";
-import { populateHours } from "./format-time";
 import { scheduleNew } from "../../service/schedule-new";
 
 
@@ -19,10 +18,7 @@ const inputToday = dayjs(new Date()).format("YYYY-MM-DD");
 selectedDate.value = inputToday;
 selectedDate.min = inputToday;
 selectedDateHome.value = inputToday;
-selectedDateHome.min = inputToday;
 
-// Formatando hora
-populateHours();
 
 
 form.onsubmit = async (event) => {
@@ -70,6 +66,7 @@ form.onsubmit = async (event) => {
             description,
             when,
         })
+        location.reload();
 
     } catch (error) {
         alert("Não foi possível realizar o agendamento.")
