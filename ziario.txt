@@ -1,0 +1,3 @@
+Hoje estava com dificuldade no calendario pois estsva fazendo errado, por causa do icone entao depois de pesquisar bastante consegui resolver trocando o icone com background.
+
+Hoje tive uma tremenda dificuldade de trazer as informacoes da api e mostrar o horario indisponivel na tela

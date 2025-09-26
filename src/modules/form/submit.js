@@ -11,15 +11,11 @@ const descriptionInput = document.getElementById("description");
 const selectedDate = document.getElementById("date-schedule");
 const selectedDateHome = document.getElementById("date");
 
-
-
 // Formatando a data para o dia de hoje dos inputs
 const inputToday = dayjs(new Date()).format("YYYY-MM-DD");
 selectedDate.value = inputToday;
 selectedDate.min = inputToday;
 selectedDateHome.value = inputToday;
-
-
 
 form.onsubmit = async (event) => {
     // Previne o carrefamento

@@ -3,7 +3,7 @@ import dayjs from "dayjs";
 // Seleciona as UL de cada período
 const periodMorning = document.querySelector(".morning .ul");
 const periodAfternoon = document.querySelector(".afternoon .ul");
-const periodNight = document.querySelector(".nigth .ul");
+const periodNight = document.querySelector(".night .ul");
 
 export function scheduleShow({ dailySchedules }) {
   try {
@@ -16,6 +16,8 @@ export function scheduleShow({ dailySchedules }) {
       // Cria o li
       const li = document.createElement("li");
       li.classList.add("list");
+
+      li.setAttribute("data-id", schedule.id)
 
       // Cria a div
       const infoDiv = document.createElement("div");
