@@ -1,0 +1,29 @@
+# Agendamento Petshop
+
+Projeto desenvolvido como parte da trilha Fullstack da Rocketseat. O objetivo foi construir uma interface web funcional e responsiva para um sistema de agendamentos a partir de um layout fornecido no Figma.
+
+## Como rodar
+
+1. npm run server
+2. npm run dev
+
+## Tecnologias
+- JavaScript
+- Dayjs
+- HTML/CSS
+
+ ## 🧠 Desafios e Aprendizados
+
+Durante o desenvolvimento, enfrentei diversos desafios que me fizeram crescer bastante como desenvolvedor. Um dos pontos mais complexos foi integrar a API e garantir que os horários já reservados fossem bloqueados corretamente no formulário, proporcionando uma experiência mais intuitiva para o usuário.
+
+Além disso, aprendi a:
+
+Manipular elementos do DOM dinamicamente para atualizar listas de agendamentos por períodos (manhã, tarde e noite)
+
+Trabalhar com datas e horários usando Dayjs
+
+Organizar o código em módulos reutilizáveis e manter a lógica do frontend separada da comunicação com a API
+
+Tratar erros de requisição de forma amigável ao usuário
+
+No fim, o projeto não só consolidou conceitos de JavaScript e manipulação de DOM, mas também reforçou boas práticas de estruturação de código e UX para aplicações web.
